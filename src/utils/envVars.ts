@@ -9,14 +9,14 @@ export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "g
 // public
 export const ALETHIO_URL                = IS_MAINNET ? 'https://explorer.aleth.io/tx' : 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
-export const BEACONSCAN_URL             = process.env.REACT_APP_BEACONSCAN_URL      || "https://beaconscan.com/medalla/validator";
-export const BEACONCHAIN_URL            = process.env.REACT_APP_BEACONCHAIN_URL     || "https://medalla.beaconcha.in/validator";
+export const BEACONSCAN_URL             = process.env.REACT_APP_BEACONSCAN_URL      || "https://beaconscan.com/spadina/validator";
+export const BEACONCHAIN_URL            = process.env.REACT_APP_BEACONCHAIN_URL     || "https://spadina.beaconcha.in/validator";
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
-export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x07b39f4fde4a38bace212b546dac87c58dfe3fdc';
-export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Medalla';
-export const CHAIN_NAME                 = process.env.REACT_APP_CHAIN_NAME          || 'Medalla';
+export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x48B597F4b53C21B48AD95c7256B49D1779Bd5890';
+export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Spadina';
+export const CHAIN_NAME                 = process.env.REACT_APP_CHAIN_NAME          || 'Spadina';
 export const TICKER_NAME                = process.env.REACT_APP_TICKER_NAME         || 'GöETH';
-export const GENESIS_FORK_VERSION       = process.env.REACT_APP_GENESIS_FORK_VERSION|| Buffer.from('00000001', 'hex');
+export const GENESIS_FORK_VERSION       = process.env.REACT_APP_GENESIS_FORK_VERSION|| Buffer.from('00000002', 'hex');
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
     throw new Error("REACT_APP_ETH_REQUIREMENT must be of type: number")
