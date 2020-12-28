@@ -43,9 +43,7 @@ const AlertIcon = styled(p => <GrommetAlert {...p} />)`
 const Container = styled.div`
   width: 100%;
 `;
-const NETWORK_ID = IS_MAINNET
-  ? NetworkChainId.Mainnet
-  : NetworkChainId['Göerli'];
+const NETWORK_ID = IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.L14;
 
 // Prop definitions
 interface OwnProps {}
@@ -99,7 +97,9 @@ const _SummaryPage = ({
   }
 
   if (!account || !connector) return <WalletDisconnected />;
-  if (chainId !== NETWORK_ID) return <WrongNetwork />;
+  if (chainId !== NETWORK_ID) {
+    return <WrongNetwork />;
+  }
 
   return (
     <WorkflowPageTemplate title="Summary">

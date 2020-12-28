@@ -19,6 +19,7 @@ export enum NetworkChainId {
   'Ropsten' = 3,
   'Rinkeby' = 4,
   'Göerli' = 5,
+  'L14' = 22,
   'Kovan' = 42,
 }
 
@@ -34,8 +35,11 @@ const supportedNetworks = [
   NetworkChainId.Kovan,
 ];
 
+const supportedMetamaskNetworks = Array.from(supportedNetworks);
+supportedMetamaskNetworks.push(NetworkChainId.L14);
+
 enum Testnet {
-  'Göerli',
+  'L14',
 }
 
 enum Mainnet {
@@ -45,7 +49,7 @@ enum Mainnet {
 export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 
 export const metamask: InjectedConnector = new MetamaskConnector({
-  supportedChainIds: supportedNetworks,
+  supportedChainIds: supportedMetamaskNetworks,
 });
 
 export const portis: PortisConnector = new PortisConnector({

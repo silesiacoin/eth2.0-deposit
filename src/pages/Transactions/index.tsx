@@ -34,9 +34,7 @@ import {
 import { IS_MAINNET } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
-const NETWORK_ID = IS_MAINNET
-  ? NetworkChainId.Mainnet
-  : NetworkChainId['Göerli'];
+const NETWORK_ID = IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.L14;
 
 // Prop definitions
 interface OwnProps {}
