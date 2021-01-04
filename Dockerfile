@@ -19,6 +19,6 @@ ADD . .
 RUN source ./.env.mainnet
 RUN yarn global add serve
 
-EXPOSE 5000
+EXPOSE 80
 
-CMD ["serve", "-s", "build"]
+CMD ["serve", "-s", "build", "-l", "80"]
