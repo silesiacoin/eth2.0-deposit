@@ -4,12 +4,12 @@ export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINN
 export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID     || '';
 export const INFURA_PROJECT_ID          = process.env.REACT_APP_INFURA_PROJECT_ID  || '';
 export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '');
-export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`;
+export const INFURA_URL                 = `https://rpc.l14.lukso.network/`;
 
 // public
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Mainnet';
-export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'GöETH';
-export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
+export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'LYXe';
+export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://blockscout.com/lukso/l14/txs';
 export const BEACONSCAN_URL             = IS_MAINNET ? 'https://beaconscan.com/validator' : `https://beaconscan.com/${ETH2_NETWORK_NAME.toLowerCase()}/validator`;
 export const BEACONCHAIN_URL            = `https://${ETH2_NETWORK_NAME.toLowerCase()}.beaconcha.in/validator`;
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
