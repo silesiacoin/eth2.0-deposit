@@ -16,7 +16,7 @@ COPY package.json .
 ADD . .
 
 # copy default config
-RUN cp ./.env.l14 ./.env
+RUN source ./.env.mainnet
 RUN yarn global add serve
 
 EXPOSE 5000
